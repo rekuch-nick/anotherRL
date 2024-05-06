@@ -4,10 +4,13 @@ function playerCombat(a, b){
 	
 	var alreadyMob = false;
 	if(slow){
-		with(c){ mobCombat(pc); }
+		creatureCombat(c, pc);
 		alreadyMob = true;
 	}
 	
+	creatureCombat(pc, c);
+	
+	/*
 	slideTowards(a, b);
 	
 	
@@ -26,11 +29,11 @@ function playerCombat(a, b){
 		c.hp -= d;
 		
 	}
-	
+	*/
 	
 	
 	if(!alreadyMob){
-		with(c){ mobCombat(pc); }
+		creatureCombat(c, pc);
 	}
 	
 }

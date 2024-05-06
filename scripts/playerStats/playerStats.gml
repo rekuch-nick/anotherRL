@@ -17,18 +17,21 @@ function playerStats(){
 	
 	armor = 0;
 	
-	aim += 5 * (gear[Slot.wep].bonus - gear[Slot.wep].curse);
-	dam += 1 * (gear[Slot.wep].bonus - gear[Slot.wep].curse);
+	damEle = Ele.normal;
 	
-	armor += 1 * (gear[Slot.arm].bonus - gear[Slot.arm].curse);
+	aim += 5 * clamp(gear[Slot.wep].bonus - gear[Slot.wep].curse, 0, 100);
+	dam += 1 * clamp(gear[Slot.wep].bonus - gear[Slot.wep].curse, 0, 100);
+	
+	armor += 1 * clamp(gear[Slot.arm].bonus - gear[Slot.arm].curse, 0, 100);
 	
 	
 	for(var i=0; i<5; i++){
+		var bns = clamp(gear[i].bonus - gear[i].curse, 0, 100);
+		
 		if(gearHasProp(gear[i], Prop.hp)){
-			hpMax += 5 * clamp(gear[i].bonus - gear[i].curse, 0, 100);
+			hpMax += 5 * bns;
 		}
 	}
-	
 	
 	
 }

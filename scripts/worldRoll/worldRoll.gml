@@ -11,7 +11,7 @@ function worldRoll(){
 	
 	
 	coinChance = 50;
-	treasure = 60; //
+	treasure = 6; //
 	floorBonus = 1;
 	
 	removeAll();

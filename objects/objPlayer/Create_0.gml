@@ -26,7 +26,7 @@ mpMax = 10;
 steps = 4;
 stepsMax = 4;
 
-dam = 10;
+dam = 4;
 evd = 10;
 crit = 10;
 aim = 0;
@@ -34,7 +34,7 @@ aim = 0;
 _hp = 20;
 _mp = 20;
 _steps = 4;
-_dam = 10;
+_dam = 4;
 _evd = 10;
 _crit = 10;
 _aim = 0;

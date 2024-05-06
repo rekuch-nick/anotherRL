@@ -22,6 +22,9 @@ draw_text(10, y + 46, pc.mp);
 
 
 
-
+draw_set_halign(fa_right);
+var s = "Hit +" + string(pc.aim) + "% Dmg " + string(creatureGetDam(pc)) + " Crit " + string(pc.crit) + "%\nEvade " + string(pc.evd) + "% DR " + string(pc.armor);
+draw_text_ext_transformed_color(room_width - 4, y + 84, s, 30, 600, .6, .6, 0, c_white, c_white, c_white, c_white, 1);
+draw_set_halign(fa_left);
 
 drawChooseItem();

@@ -17,11 +17,22 @@ function drawGear(xx, yy, o){
 	}
 	
 	var yyy = yy * 64 + 64 + 32;
+	var bns = clamp(o.bonus - o.curse, 0, 100);
 	
+	if(o.slot == Slot.wep && bns > 0){
+		draw_text(xx*64 + 32, yyy, "Dmg + " + string(bns));
+		yyy += 30;
+		draw_text(xx*64 + 32, yyy, "Hit + " + string(bns * 5) + "%");
+		yyy += 30;
+	}
 	
+	if(o.slot == Slot.arm && bns > 0){
+		draw_text(xx*64 + 32, yyy, "DR + " + string(bns));
+		yyy += 30;
+	}
 	
 	if(gearHasProp(o, Prop.hp)){
-		var n = 5 * clamp(o.bonus - o.curse, 0, 100);
+		var n = 5 * bns;
 		draw_text(xx*64 + 32, yyy, "HP +" + string(n));
 		yyy += 30;
 	}

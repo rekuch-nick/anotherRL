@@ -3,8 +3,8 @@ image_yscale = 4;
 
 creatureConstructor();
 
-hp = 20;
-hpMax = 20;
+hp = 6;
+hpMax = 6;
 xSpot = floor(x / 64);
 ySpot = floor(y / 64);
 
