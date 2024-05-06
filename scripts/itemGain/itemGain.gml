@@ -16,7 +16,6 @@ function itemGain(t){
 		instance_destroy(t);
 		return true;
 	} else if(emptySlot != -1){
-		show_debug_message(123123123)
 		
 		hud.bagSlot[emptySlot].obj = t;
 		t.x = hud.bagSlot[emptySlot].xStart;
@@ -27,35 +26,11 @@ function itemGain(t){
 		t.xFirst = t.x;
 		t.yFirst = t.y;
 		
-		show_debug_message(x)
 		
 		return true;
 	} else {
 		return false;
 	}
 	
-	
-	/*
-	var lowSlot = -1;
-	var lowEmptySlot = -1;
-	for(var i=0; i<32; i++){
-		if(t == pc.bag[i]){
-			lowSlot = i; break;
-		}
-		if(lowEmptySlot == -1 && pc.bag[i] == noone){
-			lowEmptySlot = i;
-		}
-	}
-	
-	if(lowSlot != -1){
-		pc.bagStack[lowSlot] ++;
-		return true;
-	} else if(lowEmptySlot != -1){
-		pc.bag[lowEmptySlot] = t;
-		pc.bagStack[lowEmptySlot] = 1;
-		return true;
-	}
-	
-	return false;
-	*/
+
 }

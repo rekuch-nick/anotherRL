@@ -12,3 +12,4 @@ imgSmall = noone;
 
 xFirst = x;
 yFirst = y;
+isThrowable = false;

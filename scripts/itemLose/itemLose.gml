@@ -1,20 +1,13 @@
-function itemLose(t){
+function itemLose(n){
 	
-	var slot = -1;
-	for(var i=0; i<32; i++){
-		if(t == pc.bag[i]){
-			slot = i; break;
-		}
+	
+	
+	
+	hud.bagSlot[n].stack --;
+	if(hud.bagSlot[n].stack < 1){
+		instance_destroy(hud.bagSlot[n].obj);
+		hud.bagSlot[n].obj = noone;
 	}
 	
-	if(slot != -1){
-		pc.bagStack[slot] --;
-		if(pc.bagSlot[slot] < 1){
-			pc.bag[slot] = noone;
-		}
-		return true;
-	}
-	
-	return false;
 	
 }

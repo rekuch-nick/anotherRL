@@ -107,6 +107,15 @@ if(ww.state == State.play){
 				bombs --;
 			}
 			
+			if(rClick && hud.bagSlot[activeSlot].obj != noone){
+				if(hud.bagSlot[activeSlot].obj.isThrowable){
+					
+					//blastTile(cursor.xAim, cursor.yAim);
+					throwEffect(cursor.xAim, cursor.yAim, hud.bagSlot[activeSlot].obj);
+					itemLose(activeSlot);
+				}
+			}
+			
 		}
 		
 		

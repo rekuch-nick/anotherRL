@@ -10,12 +10,14 @@ if(sprite_index == imgPupBomb){ pc.bombs ++; }
 
 
 if(sprite_index == imgPupPotion){
+	var xx = x; var yy = y;
 	if(itemGain(id)){
 		
 		var e = instance_create_depth(x, y, ww.layerE, objEffect);
 		e.ySpeed = -1;
 		e.fade = .02;
 		e.sprite_index = sprite_index;
+		e.x = xx; e.y = yy;
 		if(pc.potionIDed[potID]){
 			e.txt = txt;
 			e.txtColor = txtColor;
